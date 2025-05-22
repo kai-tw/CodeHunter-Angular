@@ -1,0 +1,29 @@
+<div class="overflow-table px-8">
+  <table>
+    <thead>
+      <tr>
+        <th i18n="@@table_redemption_code">Redemption Code</th>
+        <th i18n="@@table_expire_time">Expire Time</th>
+        <th i18n="@@table_add_time">Added Time</th>
+        <th i18n="@@table_note">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let codeData of _codeList">
+        <td
+          class="code"
+          [class]="codeData.isRecentlyAdded() ? 'recently-added' : ''"
+        >
+          <a href="{{ getUrl(codeData.code) }}" target="_blank">
+            {{ codeData.code }}
+          </a>
+        </td>
+        <td class="expire-time">
+          <app-timer [targetTime]="displayExpireTime(codeData)"></app-timer>
+        </td>
+        <td class="add-time">{{ displayAddTime(codeData) }}</td>
+        <td class="note">{{ codeData.note }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,12 @@
+<div 
+    #pageWrapper
+    class="full-page fixed inset-0 bg-white/90 text-center transition-all duration-300 z-10"
+    [class]="themes"
+>
+    <div class="relative m-auto p-12 max-w-3xl h-full overflow-auto">
+        <ng-content/>
+        <button class="absolute top-12 right-12 size-6" (click)="close()">
+            <ng-icon name="matCloseRound" size="24"></ng-icon>
+        </button>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="flex flex-col m-auto px-8 max-w-3xl min-h-full">
+  <header class="flex justify-between items-center py-8">
+    <hgroup>
+      <h1 class="text-2xl font-normal">CodeHunter</h1>
+      <h2 class="font-thin" i18n="@@title_slogan">
+        Sharing redemption codes to everyone.
+      </h2>
+    </hgroup>
+    <app-nav></app-nav>
+  </header>
+  <main class="flex-1">
+    <app-ad-node></app-ad-node>
+    <div class="my-4 p-8 rounded-3xl bg-gray-100/80">
+      <h2 class="text-gray-700" i18n="@@recommendation">Recommendation</h2>
+      <ul class="list-none">
+        <li>
+          <app-external-link
+            href="https://play.google.com/store/apps/details?id=com.kai_wu.novelglide"
+            (click)="novelGlideClick()"
+            i18n="@@novelglide_play_store"
+          >
+            NovelGlide - ePub Reader | Google Play Store
+          </app-external-link>
+        </li>
+      </ul>
+      <h2 class="mt-4 text-gray-700" i18n="@@notes">Notes</h2>
+      <ol class="pl-5 list-decimal text-slate-600">
+        <li i18n="@@badge_notes">
+          Codes with a red dot indicate they were added within the past week.
+        </li>
+      </ol>
+    </div>
+    <div class="my-4 py-12 rounded-3xl bg-gray-100/80">
+      <div
+        class="flex flex-col justify-center items-center h-48"
+        [class]="status === LoadingStatusEnum.LOADED ? 'hidden' : ''"
+      >
+        <app-loading-spinner></app-loading-spinner>
+      </div>
+      <app-tabs [class]="status === LoadingStatusEnum.LOADED ? '' : 'hidden'">
+        <app-tab title="Genshin Impact" i18n-title="@@genshin_impact">
+          <app-code-table
+            [codeList]="codeList"
+            [tableType]="GameTypeEnum.GENSHIN"
+          ></app-code-table>
+        </app-tab>
+        <app-tab title="Honkai: Star Rail" i18n-title="@@honkai_star_rail">
+          <app-code-table
+            [codeList]="codeList"
+            [tableType]="GameTypeEnum.HSR"
+          ></app-code-table>
+        </app-tab>
+        <app-tab title="Zenless Zone Zero" i18n-title="@@zenless_zone_zero">
+          <app-code-table
+            [codeList]="codeList"
+            [tableType]="GameTypeEnum.ZZZ"
+          ></app-code-table>
+        </app-tab>
+      </app-tabs>
+    </div>
+    <!-- <app-comment></app-comment> -->
+  </main>
+  <app-footer></app-footer>
+  <div class="fixed right-4 bottom-4">
+    <app-share-button></app-share-button>
+  </div>
+</div>

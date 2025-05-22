@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" target-language="ja" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="title_slogan" datatype="html">
+        <source> Sharing redemption codes to everyone. </source>
+        <target>すべての人と交換コードを共有します。</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="recommendation" datatype="html">
+        <source>Recommendation</source>
+        <target>おすすめ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="novelglide_play_store" datatype="html">
+        <source> NovelGlide - ePub Reader | Google Play Store </source>
+        <target>NovelGlide - ePubリーダー | Google Playストア</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notes" datatype="html">
+        <source>Notes</source>
+        <target>説明</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="badge_notes" datatype="html">
+        <source> Codes with a red dot indicate they were added within the past week. </source>
+        <target>赤い点のあるコードは、過去1週間以内に追加されたことを示します。</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="genshin_impact" datatype="html">
+        <source>Genshin Impact</source>
+        <target>原神</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="honkai_star_rail" datatype="html">
+        <source>Honkai: Star Rail</source>
+        <target>崩壊：スターレイル</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="zenless_zone_zero" datatype="html">
+        <source>Zenless Zone Zero</source>
+        <target>ゼンレスゾーンゼロ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="table_redemption_code" datatype="html">
+        <source>Redemption Code</source>
+        <target>交換コード</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/code-table/code-table.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="table_expire_time" datatype="html">
+        <source>Expire Time</source>
+        <target>有効期限</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/code-table/code-table.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="table_add_time" datatype="html">
+        <source>Added Time</source>
+        <target>追加日時</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/code-table/code-table.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="table_note" datatype="html">
+        <source>Notes</source>
+        <target>備考</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/code-table/code-table.component.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forever_valid" datatype="html">
+        <source>Valid forever</source>
+        <target>無期限で有効</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/code-table/code-table.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="unknown" datatype="html">
+        <source>Unknown</source>
+        <target>不明</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/code-table/code-table.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_time_format" datatype="html">
+        <source>MMM d</source>
+        <target>M 月 d 日</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/code-table/code-table.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_time_with_year_format" datatype="html">
+        <source>MMM d, yyyy</source>
+        <target>yyyy 年 M 月 dd 日</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/code-table/code-table.component.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="locale_page_title" datatype="html">
+        <source>Language</source>
+        <target>言語</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/locale-page/locale-page.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav-more-blog-link" datatype="html">
+        <source> Blog </source>
+        <target>ブログ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/nav-more-page/nav-more-page.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="timer_days" datatype="html">
+        <source>days</source>
+        <target>日</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timer/timer.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="timer_day" datatype="html">
+        <source>day</source>
+        <target>日</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timer/timer.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="timer_hours" datatype="html">
+        <source>hours</source>
+        <target>時間</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timer/timer.component.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="timer_hour" datatype="html">
+        <source>hour</source>
+        <target>時間</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timer/timer.component.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="timer_minutes" datatype="html">
+        <source>minutes</source>
+        <target>分</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timer/timer.component.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="timer_minute" datatype="html">
+        <source>minute</source>
+        <target>分</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timer/timer.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="timer_less_then_a_minute" datatype="html">
+        <source> Less than a minute.</source>
+        <target>1分未満です。</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timer/timer.component.ts</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="timer_expired" datatype="html">
+        <source>Expired</source>
+        <target>期限切れ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timer/timer.component.ts</context>
+          <context context-type="linenumber">90</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="timer_time_left" datatype="html">
+        <source>%s left</source>
+        <target>残り%s</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timer/timer.component.ts</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

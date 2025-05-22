@@ -1,0 +1,11 @@
+<nav class="flex justify-evenly min-w-20">
+  <button class="size-6" (click)="localePage.fullPage.open()">
+    <ng-icon name="heroGlobeAsiaAustralia" size="24" />
+  </button><button class="size-6" (click)="morePage.fullPage.open()">
+    <ng-icon name="heroBars3BottomRight" size="24" />
+  </button>
+</nav>
+
+<!-- Pages -->
+<app-nav-more-page #morePage/>
+<app-locale-page #localePage/>

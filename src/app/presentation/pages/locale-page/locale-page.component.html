@@ -1,0 +1,16 @@
+<app-full-page #fullPage themes="slideInFromRight">
+    <div class="flex flex-col">
+        <h3 class="my-8 text-xl" i18n="@@locale_page_title">Language</h3>
+        <div class="flex flex-wrap justify-evenly align-top flex-1">
+            @for (item of localeList; track item.locale; ) {
+                @if (item.locale === this.locale) {
+                    <span class="px-4 py-2 text-slate-700">{{ item.label }}</span>
+                } @else if (item.locale === this.defaultLocale) {
+                    <a class="px-4 py-2" href="/">{{ item.label }}</a>
+                } @else {
+                    <a class="px-4 py-2" href="/{{ item.locale }}/">{{ item.label }}</a>
+                }
+            }
+        </div>
+    </div>
+</app-full-page>
