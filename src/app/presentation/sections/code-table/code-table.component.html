@@ -2,6 +2,7 @@
   <table>
     <thead>
       <tr>
+        <th></th>
         <th i18n="@@table_redemption_code">Redemption Code</th>
         <th i18n="@@table_expire_time">Expire Time</th>
         <th i18n="@@table_add_time">Added Time</th>
@@ -10,10 +11,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let codeData of _codeList">
-        <td
-          class="code"
-          [class]="codeData.isRecentlyAdded() ? 'recently-added' : ''"
-        >
+        <td [class]="codeData.isRecentlyAdded() ? 'recently-added' : ''"></td>
+        <td class="code">
           <a href="{{ getUrl(codeData.code) }}" target="_blank">
             {{ codeData.code }}
           </a>
