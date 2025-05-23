@@ -75,12 +75,10 @@ export class AppComponent {
             .map((e: any) => new CodeData(e))
             .filter((e: CodeData) => e.isValid())
             .sort(CodeData.compare);
+          this.status = LoadingStatus.LOADED;
         },
         error: (_) => {
           this.status = LoadingStatus.ERROR;
-        },
-        complete: () => {
-          this.status = LoadingStatus.LOADED;
         },
       });
   }

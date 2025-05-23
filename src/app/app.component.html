@@ -31,31 +31,32 @@
       </ol>
     </div>
     <div class="my-4 py-12 rounded-3xl bg-gray-100/80">
-      @switch (this.status) {
-        @case (LoadingStatusEnum.LOADED) {
-          <app-tabs>
-            <app-tab title="Genshin Impact" i18n-title="@@genshin_impact">
-              <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.GENSHIN"/>
-            </app-tab>
-            <app-tab title="Honkai: Star Rail" i18n-title="@@honkai_star_rail">
-              <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.HSR"/>
-            </app-tab>
-            <app-tab title="Zenless Zone Zero" i18n-title="@@zenless_zone_zero">
-              <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.ZZZ"/>
-            </app-tab>
-          </app-tabs>
-        }
-        @case (LoadingStatusEnum.ERROR) {
-          <div class="flex flex-col justify-center items-center h-48">
-            <app-loading-error/>
-          </div>
-        }
-        @default {
-          <div class="flex flex-col justify-center items-center h-48">
-            <app-loading-spinner/>
-          </div>
-        }
-      }
+      <div class="relative min-h-48">
+        <app-tabs
+          class="transition-all duration-300"
+          [class]="this.status === LoadingStatusEnum.LOADED ? 'opacity-100 visible' : 'opacity-0 invisible'"
+        >
+          <app-tab title="Genshin Impact" i18n-title="@@genshin_impact">
+            <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.GENSHIN" />
+          </app-tab>
+          <app-tab title="Honkai: Star Rail" i18n-title="@@honkai_star_rail">
+            <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.HSR" />
+          </app-tab>
+          <app-tab title="Zenless Zone Zero" i18n-title="@@zenless_zone_zero">
+            <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.ZZZ" />
+          </app-tab>
+        </app-tabs>
+        <app-loading-error 
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+          transition-all duration-300"
+          [class]="this.status === LoadingStatusEnum.ERROR ? 'opacity-100 visible' : 'opacity-0 invisible'"
+        />
+        <app-loading-spinner
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+          transition-all duration-300"
+          [class]="this.status === LoadingStatusEnum.LOADING ? 'opacity-100 visible' : 'opacity-0 invisible'"
+        />
+      </div>
     </div>
     <!-- <app-comment></app-comment> -->
   </main>
