@@ -6,7 +6,7 @@
                 @if (item.locale === this.locale) {
                     <span class="px-4 py-2 text-slate-700">{{ item.label }}</span>
                 } @else {
-                    <span class="px-4 py-2 cursor-pointer" (click)="setLocale(item.locale)">
+                    <span class="px-4 py-2 text-sky-600 cursor-pointer" (click)="setLocale(item.locale)">
                         {{ item.label }}
                     </span>
                 }
