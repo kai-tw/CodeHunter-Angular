@@ -70,6 +70,7 @@ export class AppComponent {
       .get(`https://codehunter-api.kai-wu.net/${this.locale}/`)
       .subscribe({
         next: (data) => {
+          console.log(data);
           this.codeList = (data as Array<Object>)
             .map((e: any) => new CodeData(e))
             .filter((e: CodeData) => e.isValid())
