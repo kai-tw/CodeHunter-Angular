@@ -11,7 +11,11 @@
     </thead>
     <tbody>
       <tr *ngFor="let codeData of _codeList">
-        <td [class]="codeData.isRecentlyAdded() ? 'recently-added' : ''"></td>
+        <td>
+          @if(codeData.isRecentlyAdded()) {
+          <app-badge />
+          }
+        </td>
         <td class="code">
           <a href="{{ getUrl(codeData.code) }}" target="_blank">
             {{ codeData.code }}

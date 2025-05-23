@@ -3,10 +3,11 @@ import { formatDate, NgForOf } from "@angular/common";
 import { CodeData } from "../../../../data-model/code-data";
 import { GameType } from "../../../../data-model/game-type";
 import { TimerComponent } from "../../components/timer/timer.component";
+import { BadgeComponent } from "../../components/badge/badge.component";
 
 @Component({
   selector: "app-code-table",
-  imports: [NgForOf, TimerComponent],
+  imports: [NgForOf, TimerComponent, BadgeComponent],
   templateUrl: "./code-table.component.html",
   styleUrl: "./code-table.component.sass",
 })
