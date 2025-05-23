@@ -45,22 +45,22 @@ export class AppComponent {
 
   ngAfterContentInit() {
     // Get the locale from browser
-    // const browserLocale: string =
-    //   LocaleService.getRecord() ?? LocaleService.getFromBrowser();
+    const browserLocale: string =
+      LocaleService.getRecord() ?? LocaleService.getFromBrowser();
 
-    // if (this.locale !== browserLocale) {
-    //   LocaleService.navigateTo(browserLocale);
-    // } else {
-    this.http
-      .get(`https://codehunter-api.kai-wu.net/${this.locale}/`)
-      .subscribe((data) => {
-        this.codeList = (data as Array<Object>)
-          .map((e: any) => new CodeData(e))
-          .filter((e: CodeData) => e.isValid())
-          .sort(CodeData.compare);
-        this.status = LoadingStatus.LOADED;
-      });
-    // }
+    if (this.locale !== browserLocale) {
+      LocaleService.navigateTo(browserLocale);
+    } else {
+      this.http
+        .get(`https://codehunter-api.kai-wu.net/${this.locale}/`)
+        .subscribe((data) => {
+          this.codeList = (data as Array<Object>)
+            .map((e: any) => new CodeData(e))
+            .filter((e: CodeData) => e.isValid())
+            .sort(CodeData.compare);
+          this.status = LoadingStatus.LOADED;
+        });
+    }
   }
 
   protected novelGlideClick(): void {
