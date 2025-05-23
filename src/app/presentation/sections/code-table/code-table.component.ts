@@ -1,8 +1,8 @@
 import { Component, Input, LOCALE_ID, Inject } from "@angular/core";
 import { formatDate, NgForOf } from "@angular/common";
-import { CodeData } from "../../../data-model/code-data";
-import { TimerComponent } from "../timer/timer.component";
-import { GameType } from "../../../data-model/game-type";
+import { CodeData } from "../../../../data-model/code-data";
+import { GameType } from "../../../../data-model/game-type";
+import { TimerComponent } from "../../components/timer/timer.component";
 
 @Component({
   selector: "app-code-table",

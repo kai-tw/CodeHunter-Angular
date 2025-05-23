@@ -1,6 +1,6 @@
 import { Component, ViewChild } from "@angular/core";
 import { FullPageComponent } from "../full-page/full-page.component";
-import { ExternalLinkComponent } from "../../external-link/external-link.component";
+import { ExternalLinkComponent } from "../../components/external-link/external-link.component";
 
 @Component({
   selector: "app-nav-more-page",

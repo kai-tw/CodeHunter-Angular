@@ -4,8 +4,8 @@ import {
   heroGlobeAsiaAustralia,
   heroBars3BottomRight,
 } from "@ng-icons/heroicons/outline";
-import { NavMorePageComponent } from "../pages/nav-more-page/nav-more-page.component";
-import { LocalePageComponent } from "../pages/locale-page/locale-page.component";
+import { NavMorePageComponent } from "../../pages/nav-more-page/nav-more-page.component";
+import { LocalePageComponent } from "../../pages/locale-page/locale-page.component";
 
 @Component({
   selector: "app-nav",

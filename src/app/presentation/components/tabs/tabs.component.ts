@@ -1,14 +1,17 @@
-import {AfterContentInit, Component, ContentChildren, QueryList} from '@angular/core';
-import {TabComponent} from '../tab/tab.component';
-import {NgForOf} from '@angular/common';
+import {
+  AfterContentInit,
+  Component,
+  ContentChildren,
+  QueryList,
+} from "@angular/core";
+import { TabComponent } from "../tab/tab.component";
+import { NgForOf } from "@angular/common";
 
 @Component({
-    selector: 'app-tabs',
-    imports: [
-        NgForOf
-    ],
-    templateUrl: './tabs.component.html',
-    styleUrl: './tabs.component.sass'
+  selector: "app-tabs",
+  imports: [NgForOf],
+  templateUrl: "./tabs.component.html",
+  styleUrl: "./tabs.component.sass",
 })
 export class TabsComponent implements AfterContentInit {
   @ContentChildren(TabComponent) tabs!: QueryList<TabComponent>;
