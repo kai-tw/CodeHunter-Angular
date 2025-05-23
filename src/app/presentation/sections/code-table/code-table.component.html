@@ -1,5 +1,5 @@
 <div class="overflow-table px-8">
-  <div class="w-fit">
+  <div class="w-fit min-w-full">
     <table>
       <thead>
         <tr>
@@ -11,7 +11,10 @@
       </thead>
       <tbody>
         <tr *ngFor="let codeData of _codeList">
-          <td class="code" [class]="codeData.isRecentlyAdded() ? 'recently-added' : ''">
+          <td
+            class="code"
+            [class]="codeData.isRecentlyAdded() ? 'recently-added' : ''"
+          >
             <a href="{{ getUrl(codeData.code) }}" target="_blank">
               {{ codeData.code }}
             </a>
@@ -23,6 +26,6 @@
           <td class="note">{{ codeData.note }}</td>
         </tr>
       </tbody>
-      </table>
+    </table>
   </div>
 </div>
