@@ -13,6 +13,7 @@ import { AdNodeComponent } from "./presentation/components/ad-node/ad-node.compo
 import { NavComponent } from "./presentation/sections/nav/nav.component";
 import { ExternalLinkComponent } from "./presentation/components/external-link/external-link.component";
 import LocaleService from "./core/LocaleService";
+import { LoadingErrorComponent } from "./presentation/components/loading-error/loading-error.component";
 
 declare const gtag: Function;
 
@@ -28,6 +29,7 @@ declare const gtag: Function;
     LoadingSpinnerComponent,
     ShareButtonComponent,
     ExternalLinkComponent,
+    LoadingErrorComponent,
   ],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.sass",
@@ -48,19 +50,34 @@ export class AppComponent {
     const browserLocale: string =
       LocaleService.getRecord() ?? LocaleService.getFromBrowser();
 
-    if (this.locale !== browserLocale) {
-      LocaleService.navigateTo(browserLocale);
-    } else {
-      this.http
-        .get(`https://codehunter-api.kai-wu.net/${this.locale}/`)
-        .subscribe((data) => {
+    // if (this.locale !== browserLocale) {
+    //   // Change Locale
+    //   LocaleService.navigateTo(browserLocale);
+    // } else {
+    // Boot up.
+    this.boot();
+    // }
+  }
+
+  private boot() {
+    gtag("js", new Date());
+
+    gtag("config", "G-WDM58W0SH1");
+
+    this.http
+      .get(`https://codehunter-api.kai-wu.net/${this.locale}/`)
+      .subscribe({
+        next: (data) => {
           this.codeList = (data as Array<Object>)
             .map((e: any) => new CodeData(e))
             .filter((e: CodeData) => e.isValid())
             .sort(CodeData.compare);
           this.status = LoadingStatus.LOADED;
-        });
-    }
+        },
+        error: (_) => {
+          this.status = LoadingStatus.ERROR;
+        },
+      });
   }
 
   protected novelGlideClick(): void {

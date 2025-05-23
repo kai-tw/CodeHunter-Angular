@@ -31,32 +31,31 @@
       </ol>
     </div>
     <div class="my-4 py-12 rounded-3xl bg-gray-100/80">
-      <div
-        class="flex flex-col justify-center items-center h-48"
-        [class]="status === LoadingStatusEnum.LOADED ? 'hidden' : ''"
-      >
-        <app-loading-spinner></app-loading-spinner>
-      </div>
-      <app-tabs [class]="status === LoadingStatusEnum.LOADED ? '' : 'hidden'">
-        <app-tab title="Genshin Impact" i18n-title="@@genshin_impact">
-          <app-code-table
-            [codeList]="codeList"
-            [tableType]="GameTypeEnum.GENSHIN"
-          ></app-code-table>
-        </app-tab>
-        <app-tab title="Honkai: Star Rail" i18n-title="@@honkai_star_rail">
-          <app-code-table
-            [codeList]="codeList"
-            [tableType]="GameTypeEnum.HSR"
-          ></app-code-table>
-        </app-tab>
-        <app-tab title="Zenless Zone Zero" i18n-title="@@zenless_zone_zero">
-          <app-code-table
-            [codeList]="codeList"
-            [tableType]="GameTypeEnum.ZZZ"
-          ></app-code-table>
-        </app-tab>
-      </app-tabs>
+      @switch (this.status) {
+        @case (LoadingStatusEnum.LOADED) {
+          <app-tabs>
+            <app-tab title="Genshin Impact" i18n-title="@@genshin_impact">
+              <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.GENSHIN"/>
+            </app-tab>
+            <app-tab title="Honkai: Star Rail" i18n-title="@@honkai_star_rail">
+              <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.HSR"/>
+            </app-tab>
+            <app-tab title="Zenless Zone Zero" i18n-title="@@zenless_zone_zero">
+              <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.ZZZ"/>
+            </app-tab>
+          </app-tabs>
+        }
+        @case (LoadingStatusEnum.ERROR) {
+          <div class="flex flex-col justify-center items-center h-48">
+            <app-loading-error/>
+          </div>
+        }
+        @default {
+          <div class="flex flex-col justify-center items-center h-48">
+            <app-loading-spinner/>
+          </div>
+        }
+      }
     </div>
     <!-- <app-comment></app-comment> -->
   </main>
