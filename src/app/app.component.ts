@@ -48,15 +48,17 @@ export class AppComponent {
   ngAfterContentInit() {
     // Get the locale from browser
     const browserLocale: string =
-      LocaleService.getRecord() ?? LocaleService.getFromBrowser();
+      LocaleService.getRecord() ??
+      LocaleService.getFromBrowser() ??
+      LocaleService.defaultLocale;
 
-    // if (this.locale !== browserLocale) {
-    //   // Change Locale
-    //   LocaleService.navigateTo(browserLocale);
-    // } else {
-    // Boot up.
-    this.boot();
-    // }
+    if (LocaleService.detectionEnabled && this.locale !== browserLocale) {
+      // Change Locale
+      LocaleService.navigateTo(browserLocale);
+    } else {
+      // Boot up.
+      this.boot();
+    }
   }
 
   private boot() {
