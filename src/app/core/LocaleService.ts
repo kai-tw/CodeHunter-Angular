@@ -1,6 +1,7 @@
 import LocalStorageKeys from "./LocalStorageKeys";
 
 export default class LocaleService {
+  static detectionEnabled: boolean = true;
   static defaultLocale: string = "zh-Hant";
   static localeList: Array<{ locale: string; label: string }> = [
     { locale: "zh-Hant", label: "繁體中文" },
@@ -22,7 +23,7 @@ export default class LocaleService {
     return localStorage.getItem(LocalStorageKeys.appLocale);
   }
 
-  static getFromBrowser(): string {
+  static getFromBrowser(): string | null {
     const localeMap = new Map<string, string>();
 
     LocaleService.localeList
@@ -44,6 +45,6 @@ export default class LocaleService {
       }
     }
 
-    return LocaleService.defaultLocale;
+    return null;
   }
 }
