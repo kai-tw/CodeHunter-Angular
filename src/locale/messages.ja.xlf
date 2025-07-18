@@ -235,7 +235,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="wuthering_waves_note" datatype="html">
-        <source> Because codes of Wuthering Waves cannot redeem on website, it will copy to clipboard when you click it. </source>
+        <source> Because the redemption codes of Wuthering Waves cannot be redeemed on website, it will copy to clipboard when you click it. </source>
         <target> 鳴潮（Wuthering Waves） のコードはウェブサイト上で引き換えることができないため、クリックするとクリップボードにコピーされます。 </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
