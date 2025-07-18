@@ -22,6 +22,15 @@
             NovelGlide - ePub Reader | Google Play Store
           </app-external-link>
         </li>
+        <li>
+          <app-external-link
+            href="https://apps.apple.com/tw/app/novelglide/id6748090356"
+            (click)="novelGlideClick()"
+            i18n="@@novelglide_app_store"
+          >
+            NovelGlide - ePub Reader | App Store
+          </app-external-link>
+        </li>
       </ul>
       <h2 class="mt-4 text-gray-700" i18n="@@notes">Notes</h2>
       <ol class="pl-5 list-decimal text-slate-600">
@@ -40,19 +49,19 @@
           [class]="this.status === LoadingStatusEnum.LOADED ? 'opacity-100 visible' : 'opacity-0 invisible'"
         >
           <app-tab title="Genshin Impact" i18n-title="@@genshin_impact">
-            <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.GENSHIN" />
+            <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.GENSHIN"/>
           </app-tab>
           <app-tab title="Honkai: Star Rail" i18n-title="@@honkai_star_rail">
-            <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.HSR" />
+            <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.HSR"/>
           </app-tab>
           <app-tab title="Zenless Zone Zero" i18n-title="@@zenless_zone_zero">
-            <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.ZZZ" />
+            <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.ZZZ"/>
           </app-tab>
-            <app-tab title="Wuthering Waves" i18n-title="@@wuthering_waves">
-                <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.WUTHERING_WAVES" />
-            </app-tab>
+          <app-tab title="Wuthering Waves" i18n-title="@@wuthering_waves">
+            <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.WUTHERING_WAVES"/>
+          </app-tab>
         </app-tabs>
-        <app-loading-error 
+        <app-loading-error
           class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
           transition-all duration-300"
           [class]="this.status === LoadingStatusEnum.ERROR ? 'opacity-100 visible' : 'opacity-0 invisible'"
