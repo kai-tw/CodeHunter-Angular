@@ -37,32 +37,39 @@
           <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="wuthering_waves_note" datatype="html">
+        <source> Because codes of Wuthering Waves cannot redeem on website, it will copy to clipboard when you click it. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="genshin_impact" datatype="html">
         <source>Genshin Impact</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="honkai_star_rail" datatype="html">
         <source>Honkai: Star Rail</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="zenless_zone_zero" datatype="html">
         <source>Zenless Zone Zero</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="wuthering_waves" datatype="html">
         <source>Wuthering Waves</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="timer_days" datatype="html">

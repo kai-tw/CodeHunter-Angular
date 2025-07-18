@@ -234,6 +234,14 @@
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="wuthering_waves_note" datatype="html">
+        <source> Because codes of Wuthering Waves cannot redeem on website, it will copy to clipboard when you click it. </source>
+        <target> 由於鳴潮兌換碼不可在網頁上兌換，所以當你點擊兌換碼時將複製到剪貼簿。 </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">32,34</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>
