@@ -24,17 +24,44 @@ export class CodeTableComponent {
 
   constructor(@Inject(LOCALE_ID) protected locale: string) {}
 
-  getUrl(code: string): string {
+  clickHandler(code: string): void {
     switch (this.tableType) {
       case GameType.GENSHIN:
-        return `https://genshin.hoyoverse.com/gift?code=${code}`;
+        window.open(`https://genshin.hoyoverse.com/gift?code=${code}`, "_blank");
+        break;
       case GameType.HSR:
-        return `https://hsr.hoyoverse.com/gift?code=${code}`;
+        window.open(`https://hsr.hoyoverse.com/gift?code=${code}`, "_blank");
+        break;
       case GameType.ZZZ:
-        return `https://zenless.hoyoverse.com/redemption?code=${code}`;
+        window.open(`https://zenless.hoyoverse.com/redemption?code=${code}`, "_blank");
+        break;
+      case GameType.WUTHERING_WAVES:
+        this.copyCode(code).then(() => {
+          window.alert($localize`:@@copied_to_clipboard:Copy To Clipboard!`);
+        });
+        break;
       default:
-        return "";
     }
+  }
+
+  private async copyCode(val: string){
+    // Create temporary textarea for copying.
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = val;
+    document.body.appendChild(selBox);
+
+    // Select all contents in the textarea
+    selBox.focus();
+    selBox.select();
+    selBox.setSelectionRange(0, 99999); // For mobile devices
+    await navigator.clipboard.writeText(selBox.value);
+
+    // Copying is done. Remove the temporary textarea
+    document.body.removeChild(selBox);
   }
 
   displayExpireTime(codeData: CodeData): string {

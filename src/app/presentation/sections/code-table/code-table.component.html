@@ -17,7 +17,7 @@
           }
         </td>
         <td class="code">
-          <a href="{{ getUrl(codeData.code) }}" target="_blank">
+          <a target="_blank" (click)="clickHandler(codeData.code)">
             {{ codeData.code }}
           </a>
         </td>

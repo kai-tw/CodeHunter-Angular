@@ -218,6 +218,22 @@
           <context context-type="linenumber">98</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="copied_to_clipboard" datatype="html">
+        <source>Copy To Clipboard!</source>
+        <target>クリップボードにコピー！</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/presentation/sections/code-table/code-table.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wuthering_waves" datatype="html">
+        <source>Wuthering Waves</source>
+        <target>鳴潮</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
     </body>
   </file>
 </xliff>

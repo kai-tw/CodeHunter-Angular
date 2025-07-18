@@ -3,4 +3,5 @@ export enum GameType {
   GENSHIN,
   HSR,
   ZZZ,
+  WUTHERING_WAVES,
 }
