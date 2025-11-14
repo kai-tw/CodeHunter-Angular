@@ -83,7 +83,8 @@ export class AppComponent {
   }
 
   protected getDoShowBadge(gameType: GameType): boolean {
-    return this.codeList.some((e: CodeData) => e.isRecentlyAdded());
+    return this.codeList
+      .some((e: CodeData) => e.game === gameType && e.isRecentlyAdded());
   }
 
   protected novelGlideClick(): void {
