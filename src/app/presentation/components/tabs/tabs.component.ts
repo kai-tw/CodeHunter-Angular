@@ -6,10 +6,11 @@ import {
 } from "@angular/core";
 import { TabComponent } from "../tab/tab.component";
 import { NgForOf } from "@angular/common";
+import {BadgeComponent} from "../badge/badge.component";
 
 @Component({
   selector: "app-tabs",
-  imports: [NgForOf],
+  imports: [NgForOf, BadgeComponent],
   templateUrl: "./tabs.component.html",
   styleUrl: "./tabs.component.sass",
 })

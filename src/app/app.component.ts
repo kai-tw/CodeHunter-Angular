@@ -82,6 +82,10 @@ export class AppComponent {
       });
   }
 
+  protected getDoShowBadge(gameType: GameType): boolean {
+    return this.codeList.some((e: CodeData) => e.isRecentlyAdded());
+  }
+
   protected novelGlideClick(): void {
     gtag("event", "NovelGlide Promotion Click Event");
   }

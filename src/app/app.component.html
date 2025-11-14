@@ -48,16 +48,32 @@
           class="transition-all duration-300"
           [class]="this.status === LoadingStatusEnum.LOADED ? 'opacity-100 visible' : 'opacity-0 invisible'"
         >
-          <app-tab title="Genshin Impact" i18n-title="@@genshin_impact">
+          <app-tab
+            title="Genshin Impact"
+            i18n-title="@@genshin_impact"
+            [doShowBadge]="getDoShowBadge(GameTypeEnum.GENSHIN)"
+          >
             <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.GENSHIN"/>
           </app-tab>
-          <app-tab title="Honkai: Star Rail" i18n-title="@@honkai_star_rail">
+          <app-tab
+            title="Honkai: Star Rail"
+            i18n-title="@@honkai_star_rail"
+            [doShowBadge]="getDoShowBadge(GameTypeEnum.HSR)"
+          >
             <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.HSR"/>
           </app-tab>
-          <app-tab title="Zenless Zone Zero" i18n-title="@@zenless_zone_zero">
+          <app-tab
+            title="Zenless Zone Zero"
+            i18n-title="@@zenless_zone_zero"
+            [doShowBadge]="getDoShowBadge(GameTypeEnum.ZZZ)"
+          >
             <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.ZZZ"/>
           </app-tab>
-          <app-tab title="Wuthering Waves" i18n-title="@@wuthering_waves">
+          <app-tab
+            title="Wuthering Waves"
+            i18n-title="@@wuthering_waves"
+            [doShowBadge]="getDoShowBadge(GameTypeEnum.WUTHERING_WAVES)"
+          >
             <app-code-table [codeList]="codeList" [tableType]="GameTypeEnum.WUTHERING_WAVES"/>
           </app-tab>
         </app-tabs>

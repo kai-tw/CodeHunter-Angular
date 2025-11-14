@@ -10,4 +10,5 @@ import { Component, Input } from "@angular/core";
 export class TabComponent {
   @Input() title: string = "";
   @Input() isActive: boolean = false;
+  @Input() doShowBadge: boolean = false;
 }
